@@ -52,8 +52,12 @@
 }
 
 @keyframes shimmer {
-  0% { background-position: -200% 0; }
-  100% { background-position: 200% 0; }
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
 }
 
 .bg-mining-pattern {
@@ -136,7 +140,7 @@
   .desktop-menu {
     display: none !important;
   }
-  
+
   .hamburger-menu {
     display: block;
   }
@@ -188,7 +192,7 @@
   font-size: clamp(3rem, 8vw, 6rem);
   font-weight: 800;
   margin-bottom: 2rem;
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
@@ -279,7 +283,7 @@
 }
 
 .service-card::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -308,7 +312,7 @@
   font-size: 1.5rem;
   font-weight: 700;
   margin-bottom: 1rem;
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
 }
 
 .service-card p {
@@ -481,7 +485,7 @@
   font-size: 3rem;
   font-weight: 800;
   color: var(--ivana-gold);
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
 }
 
 /* Contact Form */
@@ -667,16 +671,16 @@
   .section-padding {
     padding: 4rem 0;
   }
-  
+
   .services-grid,
   .specialized-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .hero-content h1 {
     font-size: 3rem;
   }
-  
+
   .hero-content p {
     font-size: 1.25rem;
   }
