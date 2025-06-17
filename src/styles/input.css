@@ -26,7 +26,10 @@
 }
 
 .text-gradient {
-  @apply bg-gradient-to-r from-ivana-gold via-ivana-green to-ivana-gold bg-clip-text text-transparent;
+  background: linear-gradient(to right, #d4af37, #228b22, #d4af37);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .bg-mining-pattern {
@@ -43,7 +46,12 @@
 }
 
 .card-hover {
-  @apply transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl;
+  transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: scale(1.05);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
 }
 
 .mining-grid {

@@ -1,22 +1,19 @@
 # Ivana Resources Website
 
-A professional, modern website for Ivana Resources - Zimbabwe's premier mining consultancy. Built with TypeScript, Express.js, and featuring a responsive design with smooth animations.
+A professional, modern website for Ivana Resources - Zimbabwe's premier mining consultancy. Built with modern web technologies and deployed on Netlify with serverless functions.
 
-## 🎨 Design Features
+## 🎨 Features
 
-- **Theme Colors**: Gold (#FFD700), Green (#228B22), Red (#DC143C), and Black (#1a1a1a)
-- **Responsive Design**: Mobile-first approach with smooth transitions
-- **Modern Animations**: Fade-in effects, hover animations, and parallax scrolling
-- **Professional Layout**: Hero section, services showcase, about section, and contact form
+- **Modern Design**: Glassmorphism effects, dynamic gradients, smooth animations
+- **Responsive Layout**: Mobile-first design optimized for all devices
+- **Interactive Elements**: Gallery filtering, testimonials, keyboard navigation
+- **Contact System**: Working contact form with email integration via Netlify Functions
+- **Performance**: Optimized CSS, minified assets, fast loading times
+- **SEO Ready**: Meta tags, semantic HTML, and structured content
 
 ## 🚀 Quick Start
 
-### Prerequisites
-
-- Node.js (v14 or higher)
-- npm or yarn
-
-### Installation & Development
+### For Local Development
 
 1. **Install dependencies**
 
@@ -24,30 +21,48 @@ A professional, modern website for Ivana Resources - Zimbabwe's premier mining c
    npm install
    ```
 
-2. **Build the project**
+2. **Start local server**
 
    ```bash
-   npm run build
+   ./dev-local.sh
+   # Opens http://localhost:8000
    ```
 
-3. **Start the development server**
+3. **Or use full development server**
+   ```bash
+   npm run dev
+   # Includes backend functionality
+   ```
+
+### For Production Deployment (Netlify)
+
+1. **Build and deploy**
 
    ```bash
-   npm start
+   ./deploy.sh
    ```
 
-   Or use the convenient development script:
-
+2. **Or manual deployment**
    ```bash
-   ./dev.sh
+   npm run netlify-build
+   netlify deploy --prod --dir=public --functions=dist-functions
    ```
 
-4. **Open your browser**
-   Navigate to `http://localhost:3000`
+## 🔧 Environment Setup
 
-## 📱 Website Features
+Create environment variables in Netlify Dashboard or `.env` file:
 
-### Hero Section
+```bash
+EMAIL_USER=your-email@zoho.com
+EMAIL_PASS=your-zoho-app-password
+SMTP_HOST=smtppro.zoho.com
+SMTP_PORT=465
+COMPANY_EMAIL=info@ivanaresources.co.zw
+WEBSITE_URL=https://your-site.netlify.app
+NODE_ENV=production
+```
+
+## 📱 Website Sections
 
 - Full-screen background with mining imagery
 - Company branding with logo and tagline

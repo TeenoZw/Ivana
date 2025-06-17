@@ -4,10 +4,13 @@
   "description": "Professional website for Ivana Resources - Zimbabwe's premier mining consultancy",
   "main": "dist/server.js",
   "scripts": {
-    "build": "tsc",
+    "build": "tsc && npm run build-functions",
+    "build-functions": "tsc --project tsconfig-functions.json",
     "start": "node dist/server.js",
     "dev": "concurrently \"tsc -w\" \"nodemon dist/server.js\"",
-    "build-css": "tailwindcss -i ./src/styles/input.css -o ./public/styles/output.css --watch"
+    "dev-functions": "netlify dev",
+    "build-css": "npx tailwindcss -i ./src/styles/input.css -o ./public/styles/output.css --minify",
+    "netlify-build": "npm run build-css && npm run build-functions"
   },
   "keywords": [
     "mining",
@@ -18,6 +21,7 @@
   "author": "Ivana Resources",
   "license": "ISC",
   "dependencies": {
+    "@netlify/functions": "^2.6.0",
     "@types/cors": "^2.8.19",
     "@types/nodemailer": "^6.4.17",
     "body-parser": "^2.2.0",
